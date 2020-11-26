@@ -1,0 +1,80 @@
+﻿\documentclass[12pt,a4paper]{report}
+
+\usepackage{fontspec}
+\setmainfont{Vollkorn}
+\newfontface{\medium}{Vollkorn Medium}
+\newfontface{\semibold}{Vollkorn SemiBold}
+\newfontface{\bold}{Vollkorn Bold}
+\newfontface{\extrabold}{Vollkorn ExtraBold}
+\newfontface{\black}{Vollkorn Black}
+\newfontface{\decay}{Diagenese}
+
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\bfseries\filcenter}
+{\LARGE\thechapter}{1ex}{\titlerule[2pt]
+\vspace{2ex}\LARGE}[\vspace{1.25ex}{\titlerule[2pt]}]
+
+\newcommand{\sectionbreak}{\clearpage\vspace*{0.125\textheight}}
+
+\usepackage{microtype}
+\usepackage[toc]{tabfigures}
+\usepackage{hyperref}
+
+\makeatletter
+    \newcommand\HUGE{\@setfontsize\Huge{40}{50}}
+\makeatother
+
+\setlength{\lineskiplimit}{-100pt}
+
+\newcommand{\sub}[1]{\textsubscript{#1}}
+\renewcommand{\sup}[1]{\textsuperscript{#1}}
+\renewcommand{\sc}[1]{\textsc{\MakeLowercase{#1}}}
+\renewcommand{\contentsname}{\sc{Stages}}
+
+\newcommand{\stage}[2]{
+    \setcounter{chapter}{#1}
+    \setcounter{section}{0}
+    \chapter*{\sc{#2}}
+    \addcontentsline{toc}{chapter}{{#2}}
+}
+
+\begin{document}
+
+\renewcommand{\baselinestretch}{1.1}\normalsize
+\thispagestyle{empty}
+\begin{center}
+    \vspace*{6em}
+    {\Large{\sc{Herein lies}}}
+    \par\vspace{2.5em}
+    {\HUGE{\sc{\textbf{Taphos}}}}
+    \par\vspace{1.5em}
+    \setmainfont[RawFeature={+dlig}]{Vollkorn}
+    {\HUGE{\textbf{-.-}}}
+    \setmainfont[RawFeature={-dlig}]{Vollkorn}
+    \par\vspace{6em}
+    {\Large{\sc{A generative novel}}}
+    \par\vspace{9em}
+    {\textit{Summoned into the world on\\
+    datestamp by \href{https://github.com/nmifsud/taphos}{Nathan Mifsud}\\
+    and then summarily dispatched}}
+\end{center}
+\newpage
+
+\thispagestyle{empty}
+\vspace*{8em}\hspace{2em} He that unburied lies wants not his hearse,
+
+\hspace{2em} For unto him a tomb's the Universe.
+
+\vspace{.5em}\hspace{9em} \sc{Sir Thomas Browne}, \textit{Religio Medici} (1642)
+\newpage
+
+\tableofcontents
+\renewcommand{\baselinestretch}{1.0}\normalsize
+\newpage
+
+\sloppy
+output
+
+
+\end{document}
